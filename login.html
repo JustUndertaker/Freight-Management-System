@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Freight Management System</title>
+    <link rel="shortcut icon" href="./img/ut.png">
+    <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="./css/main.css" type="text/css" rel="stylesheet">
+    <link href="./css/cover.css" type="text/css" rel="stylesheet">
+    <link href="./css/login.css" type="text/css" rel="stylesheet">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/login.js"></script>
+  </head>
+
+<body class="d-flex h-100 text-center">  
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+   
+    <!--header-->
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <img src="./img/ut.png" alt="Bootstrap" width="32" height="32">
+        <span class="fs-4">HomePage</span>
+      </a>
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="./tool.html" class="nav-link active" aria-current="page">Magic Match Tool</a></li>
+      </ul>
+    </header>
+
+    <!--main-->
+    <main>
+    <div class="row">
+      <div class="col-4 form-signin">
+        <img class="mb-4" src="./img/head.png" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 fw-normal">Choose Your Identity</h1>
+    
+        <div class="form-check-inline">
+            <input class="form-check-input" value="customer" type="radio" name="login_identity" id="login_identity_customer" checked>
+            <label class="form-check-label" for="login_identity_customer">
+                <h5>Customer</h5>
+            </label>
+        </div>
+        <div class="form-check-inline">
+            <input class="form-check-input" value="haulier" type="radio" name="login_identity" id="login_identity_haulier">
+            <label class="form-check-label" for="login_identity_haulier">
+                <h5>Haulier</h5>
+            </label>   
+        </div>
+        <form method="GET" action="./customer.html" id="login_form">
+        <div class="form-floating">
+          <input class="form-control" name="user" type="search" id="login_username" placeholder="UserName" required>
+          <label for="floatingInput">UserName</label>
+        </div>
+        <br>
+        <button class="w-100 btn btn-lg btn-primary" type="submit">log in</button>
+        </form>
+      </div>
+      <div class="col-8">
+        <img class="mg-fluid" src="./img/login.jpg" width="668" height="648">
+      </div>
+    </div>
+
+    </main>
+
+    <!--footer-->
+    <footer class="mt-auto">
+      <p>Freight Management System by <a href="#" >Group 3, University of Nottingham</a>.</p>
+    </footer>
+  </div>
+
+</body>
+</html>

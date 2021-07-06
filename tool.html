@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <title>Freight Management System</title>
+    <link rel="shortcut icon" href="./img/ut.png">
+    <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet">
+    <link href="./css/main.css" type="text/css" rel="stylesheet">
+  </head>
+<body class="bg-light">
+       
+    <div class="container">
+    <!--hader-->
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+          <img src="./img/ut.png" alt="Bootstrap" width="32" height="32">
+          <span class="fs-4">HomePage</span>
+        </a>
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="./login.html" class="nav-link active" aria-current="page">Log Out</a></li>
+        </ul>
+    </header>
+    <div class="space"></div>
+    </div>
+    <main> 
+    <!--Magic Match tool-->
+    <div class="container my-5">
+        <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+          <div class="p-3 p-lg-5 pt-lg-3">
+
+            <div class="row border-bottom">
+                <div class="col-4">
+                  <img src="./img/tool.png" alt="Bootstrap" width="64" height="64">
+                </div>
+                <div class="col">
+                  <h3><b>Magic Match tool</b></h3>
+                </div>
+            </div>
+            <div class="space"></div>
+            
+            
+            <!--choose lsit-->
+            <div class="row">
+                <div class="col-auto me-auto">
+                    <h4><b>Freeload List</b></h4>
+                </div>
+                <div class="col-auto">
+                    <button type="button" class="btn btn-primary text-nowrap" onclick="tableLoad()">Load Data</button>
+                </div>
+            </div>
+            <div class="row">
+                  <!--table-->
+                  <table class="table table-hover align-middle" id="table_freeload_list">
+                  </table>
+            </div>
+            <div class="space"></div>
+
+            <!--choose info-->
+            <div class="row text-center border-bottom">
+                <h4><b>Information</b></h4>
+            </div>
+            <br>
+            <!--Freeload Info-->
+            <div class="row border">
+                <div class="col-4">
+                    <div class="row text-center border-bottom">
+                        <h5><b>Freeload Info</b></h5>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="freeload_id" class="col-form-lable">
+                                <h4><b>Id</b></h4>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <h4 id="freeload_id">Choose First</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="freeload_origination" class="col-form-lable">
+                                <h4><b>Origination</b></h4>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <h4 id="freeload_origination">Choose First</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="freeload_destination" class="col-form-lable">
+                                <h4><b>Destination</b></h4>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <h4 id="freeload_destination">Choose First</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="freeload_loadtype" class="col-form-lable">
+                                <h4><b>Loadtype</b></h4>
+                            </label>
+                        </div>
+                        <div class="col">
+                            <h4 id="freeload_loadtype">Choose First</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Haulier Info-->
+                <div class="col-8 border-start">
+                    <div class="row text-center border-bottom">
+                        <h5><b>Haulier Info</b></h5>
+                    </div>
+                    <div class="row">
+                        <table class="table table-hover align-middle" id="table_haulier_list">
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+    </div>
+
+<!--accept-->
+<div class="modal fade" id="modal_accept" tabindex="-1" aria-labelledby="modal_lable" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal_lable">Confirm</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Do you confirm to Accept this Freeload?</p>
+          <div id="modal_accept_value"></div>
+        </div>
+        <div class="modal-footer">
+          <a type="button" class="btn btn-primary" onclick="acceptFreeload()">Confirm</a>
+          <a type="button" data-bs-dismiss="modal" class="btn btn-danger">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!--message-->
+<div class="modal fade" id="modal_message" tabindex="-1" aria-labelledby="modal_lable" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modal_lable">Message</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="modal_message_text"></div>
+        </div>
+        <div class="modal-footer">
+          <a type="button" data-bs-dismiss="modal" class="btn btn-primary">Cancel</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    </div>
+    </main>
+    <!--js-->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap-table.min.js"></script>
+  <script src="./js/tool.js"></script>
+</body>
+</html>

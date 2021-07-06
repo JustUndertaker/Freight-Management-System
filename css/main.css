@@ -1,0 +1,30 @@
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+
+.space {
+  height: 3rem;
+}
+
+.divfooter {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 83.5%;
+  text-align: center;
+}
+.divdisplay {
+  margin-top: 10rem;
+}
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+

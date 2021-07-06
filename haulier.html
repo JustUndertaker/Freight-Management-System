@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Freight Management System</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/ut.png">
+    <link href="./css/bootstrap.min.css" type="text/css" rel="stylesheet"> 
+    <link href="./css/bootstrap-table.min.css" type="text/css" rel="stylesheet">
+    <link href="./css/main.css" type="text/css" rel="stylesheet"> 
+</head>
+<body class="bg-light">
+    <main>    
+      <div class="container">
+        
+        <!--hader-->
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+          <a href="./index.html" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+            <img src="./img/ut.png" alt="Bootstrap" width="32" height="32">
+            <span class="fs-4">HomePage</span>
+          </a>
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="./login.html" class="nav-link active" aria-current="page">Log Out</a></li>
+          </ul>
+        </header>       
+        <div class="space"></div>
+
+        <!--Haulier Information-->
+        <div class="container my-5">
+          <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="p-3 p-lg-5 pt-lg-3">
+
+              <div class="row border-bottom">
+                <div class="col-4">
+                  <img src="./img/head.png" alt="Bootstrap" width="64" height="64">
+                </div>
+                <div class="col">
+                  <h3><b>Haulier Information</b></h3>
+                </div>
+              </div>
+              <div class="space"></div>
+
+                  <!--row-->
+                  <div class="row justify-content-center">
+                    <div class="col-2">
+                      <label for="haulier_id" class="col-form-lable">
+                        <h4><b>Id</b></h4>
+                      </label>
+                    </div>
+                    <div class="col-3">
+                      <h4 id="haulier_id">id</h4>
+                    </div>
+                    <div class="col-2"></div>
+                    <div class="col-4"></div>
+                  </div>
+                  <br>
+
+                  <!--row-->
+                  <div class="row justify-content-center">
+                    <div class="col-2">
+                      <label for="haulier_name" class="col-form-lable">
+                        <h4><b>Name</b></h4>
+                      </label>
+                    </div>
+                    <div class="col-3">
+                      <h4 id="haulier_name">name</h4>
+                    </div>
+                    <div class="col-2">
+                      <label for="haulier_address" class="col-form-lable">
+                        <h4><b>Address</b></h4>
+                      </label>
+                    </div>
+                    <div class="col-4">
+                      <h4 id="haulier_address">address</h4>
+                    </div>
+                  </div>
+                  <br>
+
+                  <!--row-->
+                  <div class="row justify-content-center">
+                    <div class="col-2">
+                      <label for="haulier_phone" class="col-form-lable">
+                        <h4><b>Phone</b></h4>
+                      </label>
+                    </div>
+                    <div class="col-3">
+                      <h4 id="haulier_phone">phone</h4>
+                    </div>
+                    <div class="col-2">
+                      <label for="haulier_location" class="col-form-lable">
+                        <h4><b>Location</b></h4>
+                      </label>
+                    </div>
+                    <div class="col-4">
+                      <h4 id="haulier_location">location</h4>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!--Vehicle Information-->
+        <div class="container my-5">
+          <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="p-3 p-lg-5 pt-lg-3">
+
+              
+              <div class="row border-bottom">
+                <div class="col-4">
+                  <img src="./img/vehicle.png" alt="Bootstrap" width="64" height="64">
+                </div>
+                <div class="col">
+                  <h3><b>Vehicle Information</b></h3>
+                </div>
+              </div>
+              <div class="space"></div>
+
+              <div class="row">
+                <div class="col-4">
+                  <h4><b>Your Vehicle</b></h4>
+                  <select class="form-select" multiple aria-label="multiple select example" id="vehicle_choose">
+                  </select>
+                </div>
+                <div class="col-8 border-start">
+                                <!--row-->
+              <div class="row justify-content-center">
+                <div class="col-2">
+                  <label for="vehicle_id" class="col-form-lable">
+                    <h4><b>Id</b></h4>
+                  </label>
+                </div>
+                <div class="col-3">
+                  <h4 id="vehicle_id">id</h4>
+                </div>
+                <div class="col-2">
+                  <label for="vehicle_name" class="col-form-lable">
+                    <h4><b>Name</b></h4>
+                  </label>
+                </div>
+                <div class="col-4">
+                  <h4 id="vehicle_name">name</h4>
+                </div>
+              </div>
+              <br>
+
+              <!--row-->
+              <div class="row justify-content-center">
+                <div class="col-2">
+                  <label for="vehicle_loadtypeid" class="col-form-lable">
+                    <h4><b>Loadtypeid</b></h4>
+                  </label>
+                </div>
+                <div class="col-3">
+                  <h4 id="vehicle_loadtypeid">id</h4>
+                </div>
+                <div class="col-2">
+                  <label for="vehicle_tonnage" class="col-form-lable">
+                    <h4><b>Tonnage</b></h4>
+                  </label>
+                </div>
+                <div class="col-4">
+                  <h4 id="vehicle_tonnage">tonnage</h4>
+                </div>
+              </div>
+              <br>
+
+              <!--row-->
+              <div class="row justify-content-center">
+                <div class="col-2">
+                  <label for="vehicle_description" class="col-form-lable">
+                    <h4><b>Dscription</b></h4>
+                  </label>
+                </div>
+                <div class="col-3">
+                  <h4 id="vehicle_description">LoadType</h4>
+                </div>
+                <div class="col-2">
+                  <label for="vehicle_hazrdous" class="col-form-lable">
+                    <h4><b>Hazrdous</b></h4>
+                  </label>
+                </div>
+                <div class="col-4">
+                  <h4 id="vehicle_hazrdous">hazrdous</h4>
+                </div>
+                </div>
+              </div>
+
+              </div>           
+              <div class="space"></div>
+            </div>
+          </div>
+        </div>
+
+        <!--Your load-->
+        <div class="container my-5">
+          <div class="row p-4 pb-0 pe-lg-0 pt-lg-5 align-items-center rounded-3 border shadow-lg">
+            <div class="p-3 p-lg-5 pt-lg-3">
+              
+              <div class="row border-bottom">
+                <div class="col-auto me-auto">
+                  <h4><b>Your Load</b></h4>
+                </div>
+                <div class="col-auto">
+                  <button type="button" class="btn btn-primary text-nowrap" onclick="tableLoad()">Load Data</button>
+                </div>
+              </div>
+              <br>
+
+              <!--table-->
+              <table class="table table-hover align-middle" id="table_freeload">
+                
+              </table>
+
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="space"></div>
+      </div>
+    </main> 
+
+<!-- Warning -->
+<div class="modal fade" data-bs-backdrop="static" id="modal_warning" tabindex="-1" aria-labelledby="modal_lable" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal_lable">Warning</h5>
+      </div>
+      <div class="modal-body">
+        <div id="modal_warning_text"></div>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary" href="./login.html">Log Out</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--detele-->
+<div class="modal fade" id="modal_detele" tabindex="-1" aria-labelledby="modal_lable" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal_lable">Confirm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Do you confirm to detele this Freeload?</p>
+        <div id="modal_detele_value"></div>
+      </div>
+      <div class="modal-footer">
+        <a type="button" class="btn btn-primary" onclick="deteleFreeload()">Confirm</a>
+        <a type="button" data-bs-dismiss="modal" class="btn btn-danger">Cancel</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--message-->
+<div class="modal fade" id="modal_message" tabindex="-1" aria-labelledby="modal_lable" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal_lable">Message</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div id="modal_message_text"></div>
+      </div>
+      <div class="modal-footer">
+        <a type="button" data-bs-dismiss="modal" class="btn btn-primary">Cancel</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--js-->
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/bootstrap-table.min.js"></script>
+  <script src="./js/haulier.js"></script>
+</body>
+</html>
